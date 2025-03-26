@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5e6d7;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #007bff;
+}
+
+/* Enhanced Tagline with Gradient and Animation */
+.tagline {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #007bff, #28a745);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fadeIn 1.5s ease-in-out;
+  margin-bottom: 40px;
+}
+
+/* Animation for a Smooth Appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Anchor Tag Styling */
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+  color: #28a745;
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.auth-buttons button, button {
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.login-btn {
+  background-color: #007bff;
+}
+
+.signup-btn {
+  background-color: #28a745;
+}
+
+.auth-buttons button:hover, button:hover {
+  opacity: 0.9;
+}
+
+/* About Section */
+.about {
+  margin-top: 80px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}

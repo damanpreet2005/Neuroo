@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f5e6d7;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  nav a.signout-btn {
+    background-color: #dc3545;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  
+  nav a:hover {
+    background-color: #c82333;
+  }
+  
+  .container {
+    padding: 40px;
+  }
+  
+  .feature {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .feature h2 {
+    color: #007bff;
+  }
+  
+  .feature p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+  }
+  
+  .main-header h1 {
+    font-size: 2rem;
+  }
+  
+  .main-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .main-header nav a.signout-btn {
+    background-color: #dc3545;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .main-header nav a:hover {
+    background-color: #c82333;
+  }
