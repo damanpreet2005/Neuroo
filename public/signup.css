@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +6,9 @@
   font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-  background-color: #f5e6d7;
+  background-color: #f9fafb;
   color: #333;
   height: 100vh;
   display: flex;
@@ -24,15 +26,16 @@ body {
   align-items: center;
 }
 
+/* Header */
 h1 {
   font-size: 5rem;
-  color: #007bff;
+  color: #1b5e20;
 }
 
-/* Enhanced Tagline with Gradient and Animation */
+/* Enhanced Tagline with Animation */
 .tagline {
   font-size: 1.8rem;
-  background: linear-gradient(90deg, #007bff, #28a745);
+  background: linear-gradient(90deg, #1b5e20, #388e3c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -40,7 +43,6 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* Animation for a Smooth Appearance */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -50,17 +52,17 @@ h1 {
   }
 }
 
-/* Anchor Tag Styling */
+/* Link Styling */
 a {
   text-decoration: none;
-  color: #007bff;
+  color: #1b5e20;
   font-weight: bold;
   margin: 0 15px;
   transition: color 0.3s, transform 0.3s;
 }
 
 a:hover {
-  color: #28a745;
+  color: #388e3c;
   transform: translateY(-2px);
 }
 
@@ -77,11 +79,11 @@ a:hover {
 }
 
 .login-btn {
-  background-color: #007bff;
+  background-color: #1b5e20;
 }
 
 .signup-btn {
-  background-color: #28a745;
+  background-color: #388e3c;
 }
 
 .auth-buttons button:hover, button:hover {
@@ -97,7 +99,7 @@ a:hover {
 
 .about h2 {
   font-size: 2rem;
-  color: #007bff;
+  color: #1b5e20;
 }
 
 .about p {
