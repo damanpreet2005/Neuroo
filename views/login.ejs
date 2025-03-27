@@ -1,18 +1,30 @@
 <%- include('partials/header') %>
-<div class="container">
-  <header>
-    <h1>Login to Neuroo</h1>
-  </header>
-  <br>
-  <form action="/login" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    &nbsp
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+<div class="container1">
+  <a href="/" class="back-home">← Back to Home</a>
+  <div class="login-form">
+      <h2>Welcome Back</h2>
+      <p>Login to access your health insights</p>
 
-    <button type="submit" class="login-btn">Login</button>
-  </form>
+      <form action="/login" method="post">
+          <label for="username">Email Address</label>
+          <input type="text" id="username" name="username" required><br><br>
+
+
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="password">Password</label>
+          <input type="password" id="password" name="password" required> <br><br><br>
+
+          <div class="form-options">
+              <label class="remember-me">
+                  <input type="checkbox" name="remember"> Remember me
+              </label>
+              <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p class="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
+  </div>
 </div>
 </body>
 </html>

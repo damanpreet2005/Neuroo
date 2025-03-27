@@ -1,23 +1,33 @@
-<%- include('partials/header') %>
-<div class="container">
-  <header>
-    <h1>Neuroo</h1>
-    <p class="tagline">Empowering Minds, Enriching Lives</p>
-  </header>
-
-  <div class="auth-buttons">
-    <a href="/login"><button class="login-btn">Login</button></a>
-    <a href="/signup"><button class="signup-btn">Sign Up</button></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Neuroo</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="heading">
+      <div class="logo-name-container">
+        <img src="/logo.png" alt="Neuroo Logo" class="logo">
+        <h1>Neuroo</h1>
+      </div>
+      <p class="tagline">Empowering Minds, Enriching Lives</p>
+    </div>
+  <br>
+    <div class="auth-buttons">
+      <a href="/login"><button class="login-btn">Login</button></a>
+      <a href="/signup"><button class="signup-btn">Sign Up</button></a>
+    </div>
+  <br><br>
+    <div class="about">
+      <h2>What is Neuroo?</h2>
+      <p>
+        Neuroo is an AI platform offering personalized support for neurological challenges through scheduling, social skill training, and assistance.
+      </p>
+    </div>
   </div>
-
-  <section class="about">
-    <h2>What is Neuroo?</h2>
-    <p>
-      Neuroo is an AI-powered platform designed to support individuals with neurological challenges.
-      It offers personalized scheduling, social skill training, and a conversational assistant to
-      promote independence and enhance well-being.
-    </p>
-  </section>
-</div>
-</body>
+  </body>
 </html>

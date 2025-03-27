@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Body Styling */
@@ -12,98 +12,237 @@ body {
   color: #333;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text: 1.5rem;
 }
 
 /* Header */
-h1 {
-  font-size: 5rem;
-  color: #1b5e20;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced Tagline with Animation */
-.tagline {
-  font-size: 1.8rem;
+img{
+  height: 3rem;
+}
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.logo-name-container {
+  display: flex; /* Display logo and name in a row */
+  align-items: center; /* Align logo and name vertically */
+}
+
+.logo {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and name */
+}
+
+.header-left {
+  text-align: left;
+}
+
+.header-left h1 {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  margin-bottom: 5px;
+}
+
+.tagline{
+  background: linear-gradient(90deg, #1b5e20, #388e3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-left .tagline {
+  font-size: 1.1rem;
   background: linear-gradient(90deg, #1b5e20, #388e3c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   animation: fadeIn 1.5s ease-in-out;
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  padding-left: 5px;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+      opacity: 0;
   }
   to {
-    opacity: 1;
+      opacity: 1;
   }
 }
 
-/* Link Styling */
-a {
+nav a {
   text-decoration: none;
   color: #1b5e20;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 15px;
   transition: color 0.3s, transform 0.3s;
+  padding-right: 10px;
 }
 
-a:hover {
+nav a:hover {
   color: #388e3c;
   transform: translateY(-2px);
 }
 
-/* Buttons */
-.auth-buttons button, button {
-  font-size: 1.5rem;
-  margin: 10px;
-  padding: 15px 40px;
+/* Container for Login/Signup Forms and What is Neuroo */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.container1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  padding: 0px 20px 20px 20px;
+}
+
+.login-form{
+  margin-top: 100px;
+}
+
+/* Login/Signup Form Styling */
+.login-form,
+.what-is-neuroo {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.login-form h2,
+.what-is-neuroo h2 {
+  font-size: 2.2rem;
+  color: #1b5e20;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.login-form p,
+.what-is-neuroo p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+/* Button Styling */
+.login-btn,
+.signup-btn {
+  width: 200px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  color: #fff;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 10px;
 }
 
-.login-btn {
-  background-color: #1b5e20;
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: #43A047;
+  transform: translateY(-2px);
 }
 
-.signup-btn {
-  background-color: #388e3c;
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.auth-buttons button:hover, button:hover {
-  opacity: 0.9;
+.remember-me {
+  font-size: 0.9rem;
 }
 
-/* About Section */
-.about {
-  margin-top: 80px;
+.forgot-password {
+  font-size: 0.9rem;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.signup-link {
   text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.back-home {
+  display: block;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 1rem;
+  align-self: flex-start; 
+}
+
+/* What is Neuroo Section */
+.what-is-neuroo {
+  background-color: #f0f8ff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  width: 100%;
   max-width: 600px;
+  text-align: center;
+  margin-top: 20px; /* Added margin-top to separate from login form */
 }
 
-.about h2 {
-  font-size: 2rem;
+.what-is-neuroo h2 {
+  font-size: 2.2rem;
   color: #1b5e20;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.about p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.what-is-neuroo p {
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: #555;
+  margin-bottom: 30px;
+  padding: 0 20px; /* Added horizontal padding for better readability */
+}
+
+.about{
+  padding: 0px 400px;
+  text-align: center;
+}
+.about h2{
+  padding-bottom: 10px;
 }
