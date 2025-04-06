@@ -43,6 +43,8 @@ scenarios = {
     }
 }
 
+# Function to initialize the chat history and the scenario-specific prompt.
+# It takes the scenario name and an optional custom prompt for the "Custom Scenario".
 def initialize_scenario(scenario_name, custom_prompt=""):
     st.session_state.messages = []
     st.session_state.scenario_prompt = ""
@@ -58,6 +60,7 @@ def initialize_scenario(scenario_name, custom_prompt=""):
         st.session_state.scenario_prompt = ""
         st.warning("Please enter your custom scenario.")
 
+# Function to update the currently selected scenario and initialize the conversation for it.
 def change_scenario(scenario_name):
     st.session_state.current_scenario = scenario_name
     st.session_state.custom_scenario_input = "" # Clear previous custom input
@@ -70,6 +73,7 @@ for scenario_name in scenarios:
 if st.session_state.current_scenario:
     st.header(f"Scenario: {st.session_state.current_scenario} - {scenarios[st.session_state.current_scenario]['description']}")
 
+# Displya text area for custom scenario input
 custom_scenario_text = ""
 if st.session_state.current_scenario == "Custom Scenario":
     custom_scenario_text = st.text_area("Describe your custom social scenario:", key="custom_scenario_input")
@@ -80,10 +84,12 @@ if st.session_state.current_scenario == "Custom Scenario":
 elif not st.session_state.messages and st.session_state.current_scenario != "Custom Scenario":
     initialize_scenario(st.session_state.current_scenario)
 
+#Display chat history
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-
+        
+# If a scenario prompt is active and it's not the "Custom Scenario", handle user input and bot response
 if st.session_state.scenario_prompt and st.session_state.current_scenario != "Custom Scenario":
     if prompt := st.chat_input("Your response:"):
         st.session_state.messages.append({"role": "user", "content": prompt})
@@ -105,7 +111,8 @@ if st.session_state.scenario_prompt and st.session_state.current_scenario != "Cu
             response = model.generate_content(feedback_prompt).text
             st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
-
+            
+# If the current scenario is "Custom Scenario" and a prompt has been generated, handle user input and bot response
 elif st.session_state.current_scenario == "Custom Scenario" and st.session_state.scenario_prompt:
     if prompt := st.chat_input("Your response:"):
         st.session_state.messages.append({"role": "user", "content": prompt})
