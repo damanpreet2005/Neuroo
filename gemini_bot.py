@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 model = genai.GenerativeModel('gemini-1.5-flash')
-st.set_page_config(page_title="Gemini LLM Social Skills Trainer")
+st.set_page_config(page_title="Social Skills Trainer")
 
 # Initialize session state for messages if it doesn't exist
 if "messages" not in st.session_state:
