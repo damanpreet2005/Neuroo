@@ -8,15 +8,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
+// Main Route
 app.get('/', (req, res) => {
   res.render('index');
 });
 
+//Login route
 app.get('/login', (req, res) => {
   res.render('login');
 });
 
+// login page post request
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username === 'admin' && password === 'password') {
@@ -26,6 +28,7 @@ app.post('/login', (req, res) => {
   }
 });
 
+// signup page
 app.get('/signup', (req, res) => {
   res.render('signup');
 });
