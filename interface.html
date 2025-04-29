@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Input & Response</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f0f4f8;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e6f7ff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Task</h2>
+    <input type="text" id="userInput" placeholder="Type something..." />
+    <button onclick="generateResponse()">Submit</button>
+    <div id="response"></div>
+  </div>
+
+  <script>
+    function generateResponse() {
+      const input = document.getElementById("userInput").value;
+      let reply = "";
+
+      // Basic response logic
+      if (input.trim() === "") {
+        reply = "Please enter something.";
+      } else {
+        reply = `1: Gather Your Ingredients & Tools
+
+        2: Boil the Water
+
+        3: Add the Pasta
+
+        4: Check & Drain
+        
+        5: Add Sauce
+        
+        6: Add Extras (Optional)
+        Sprinkle some cheese.
+        Add cooked veggies or seasoning if you like.
+        
+        7: Serve & Eat
+        Put pasta in a bowl or plate.`;
+      }
+
+      document.getElementById("response").innerText = reply;
+    }
+  </script>
+</body>
+</html>
